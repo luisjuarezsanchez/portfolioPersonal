@@ -1,0 +1,616 @@
+:root {
+    --color-base: #0f172a;
+    --color-primario: #3498db;
+    --color-secundario: #2ecc71;
+    --color-fondo: #f2f2f2;
+    --color-letras: #ffffff;
+    --color-subtitulos: #ffa500;
+    --color-terciario: #192a51;
+    --color--elements: #3A4C6B;
+    --color-letras-oscuro: #000000;
+    --academic-cards: #0A1F2E;
+    --color-adicional: #3b82f6;
+    --verde-complementario: #22c55e;
+}
+
+
+body {
+    background-color: var(--color-base);
+}
+
+/* Anchura del scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Cambia el ancho del scrollbar */
+}
+
+/* Estilo del thumb (la barra de desplazamiento) */
+::-webkit-scrollbar-thumb {
+    background-color: #0088cc;
+    /* Cambia el color del thumb */
+    border-radius: 5px;
+    /* Cambia la forma del thumb */
+}
+
+/* Estilo del track (la pista del scrollbar) */
+::-webkit-scrollbar-track {
+    background-color: #333;
+    /* Cambia el color del track */
+}
+
+
+
+.title {
+    color: var(--color-primario);
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.hr-banner {
+    color: var(--color-primario);
+    border: solid 2px;
+    margin-bottom: 12px;
+}
+
+
+
+.profesion,
+.name {
+    color: var(--color-letras);
+    font-size: 25px;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+
+.presentation {
+    color: var(--color-letras);
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+
+.bold {
+    font-weight: 700;
+}
+
+.navbar-portfolio {
+    background-color: var(--color-base) !important;
+    color: var(--color-letras);
+}
+
+/* Cambiar el color de las letras de la barra de navegación */
+.navbar-nav .nav-link {
+    color: var(--color-letras)
+        /* Cambia el color a blanco */
+}
+
+/* Cambiar el color de las letras de la barra de navegación al pasar el ratón por encima */
+.navbar-nav .nav-link:hover {
+    color: var(--color-primario);
+    /* Cambia el color a rojo al pasar el ratón por encima */
+}
+
+.navbar-toggler {
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+}
+
+
+/* Cambiar el color del texto del botón de la barra de navegación */
+.navbar-toggler-icon {
+    color: var(--color-letras);
+}
+
+.navbar-nav li {
+    float: right !important;
+    font-size: 1.2rem;
+    align-items: flex-end;
+}
+
+.nav-link {
+    font-size: 18px;
+
+}
+
+.formacion-title,
+.experience-title {
+    color: var(--color-subtitulos);
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.formacion-body,
+.experience-body {
+    color: var(--color-letras);
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+.btn-cv {
+    margin-top: 10px;
+}
+
+.img-banner {
+    height: 100%;
+    width: 100%;
+}
+
+.tecnologias {
+    margin-top: 50px;
+    background-color: var(--color-terciario);
+}
+
+.img-zoom {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.img-zoom:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.seccion-title {
+    margin-top: 10%;
+    color: var(--color-primario);
+    text-align: center;
+    font-size: 25px;
+}
+
+.seccion-body {
+    color: var(--color-letras);
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+
+
+
+/*TIMELINE*/
+.main-timeline:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main-timeline .timeline {
+    width: calc(50% + 70px);
+    margin: 0 5px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+
+.main-timeline .timeline-content {
+    color: white;
+    background: var(--academic-cards);
+    min-height: 130px;
+    padding: 30px 90px 30px 15px;
+    border-top: none;
+    display: block;
+    position: relative;
+    text-align: justify;
+}
+
+.main-timeline .timeline-content:before {
+    content: "";
+    background-color: var(--color-adicional);
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main-timeline .timeline-content:hover {
+    text-decoration: none;
+}
+
+.main-timeline .timeline-icon {
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 16px;
+}
+
+.main-timeline .timeline-year {
+    color: #333;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    transform: translateY(-50%) rotate(90deg);
+    position: absolute;
+    top: 50%;
+    right: 60px;
+}
+
+.main-timeline .title-experience {
+    color: white;
+    font-size: 20px;
+    margin: 0 0 5px;
+}
+
+.place-experience {
+    color: white;
+    font-size: 20px;
+}
+
+.main-timeline .description-experience {
+    font-size: 14px;
+    margin: 0;
+}
+
+.main-timeline .timeline:nth-child(even) {
+    float: right;
+    margin: 0 0 0 5px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content {
+    padding: 30px 30px 30px 65px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content:before {
+    right: auto;
+    left: 0;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-icon {
+    right: auto;
+    left: 10px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-year {
+    right: auto;
+    left: 60px;
+}
+
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before {
+    background-color: var(--verde-complementario);
+}
+
+.main-timeline .timeline:nth-child(4n+2) .title-experience {
+    color: white;
+}
+
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before {
+    background-color: var(--color-adicional);
+}
+
+.main-timeline .timeline:nth-child(4n+3) .title-experience {
+    color: white;
+}
+
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before {
+    background-color: #7438B9;
+}
+
+.main-timeline .timeline:nth-child(4n+4) .title-experience {
+    color: white;
+}
+
+@media screen and (max-width:767px) {
+
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even) {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+
+    .main-timeline .title-experience {
+        font-size: 18px;
+    }
+
+    .main-timeline .timeline-content:before {
+        width: 20px;
+    }
+
+    .list-jobs>li {
+        text-align: left;
+    }
+
+    .main-timeline .timeline-content {
+        padding: 30px 90px 30px 20px;
+    }
+
+    .main-timeline .timeline:nth-child(even) .timeline-content {
+        padding: 30px 30px 30px 30px;
+    }
+
+}
+
+
+/*Cards*/
+.card-academic {
+    background-color: var(--color--elements);
+}
+
+.card-title {
+    color: var(--color-letras);
+    font-weight: bold;
+}
+
+.card-text {
+    color: var(--color-letras);
+}
+
+.card-academic {
+    transition: transform 0.2s;
+}
+
+.card-academic:hover {
+    transform: scale(1.05);
+    /* Hace zoom en un 5% al pasar el mouse sobre la tarjeta */
+    cursor: pointer;
+}
+
+.btn-academic {
+    /* background-color: var(--color-secundario); */
+    background-color: var(--color-base);
+    /* color: var(--color-letras-oscuro); */
+    color: var(--color-primario);
+    font-weight: bold;
+    border-color: var(--color-primario);
+}
+
+.btn-academic.active {
+    background-color: #007bff;
+    /* Color de fondo del botón activo */
+    color: #fff;
+    /* Color del texto del botón activo */
+}
+
+/**/
+.btn-primary {
+    font-size: 14px;
+}
+
+
+
+/* Estilos CSS para el modal */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Estilos CSS para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Estilos para la imagen en el modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 95%;
+    max-height: 80%;
+}
+
+.modal-body {
+    text-align: justify;
+}
+
+/* Estilo para el botón de cierre */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.img-card {
+    cursor: zoom-in;
+}
+
+.tarjeta {
+    display: none;
+}
+
+
+.card-academic {
+    background-color: var(--academic-cards);
+}
+
+.title-card {
+    text-align: left;
+    font-size: 18px;
+}
+
+.title-skills {
+    color: var(--color-subtitulos);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/*MODAL DESCRIPCIONES DE PROYECTOS*/
+.modal-content {
+    background-color: var(--academic-cards);
+    color: var(--color-letras);
+}
+
+.text-bg-php {
+    background-color: rgb(72, 76, 137);
+    color: var(--color-letras);
+}
+
+.text-bg-mysql {
+    background-color: rgb(242, 145, 17);
+    color: var(--color-letras);
+}
+
+.text-bg-bootstrap {
+    background-color: rgb(86, 61, 124);
+    color: var(--color-letras);
+}
+
+.text-bg-css {
+    background-color: rgb(38, 77, 228);
+    color: var(--color-letras);
+}
+
+.text-bg-javascript {
+    background-color: rgb(240, 219, 79);
+    color: black;
+}
+
+.text-bg-html {
+    background-color: rgb(227, 76, 38);
+    color: var(--color-letras);
+}
+
+.text-bg-wordpress {
+    background-color: rgb(33, 117, 155);
+    color: var(--color-letras);
+}
+
+.text-bg-apache {
+    background-color: rgb(228, 104, 42);
+    color: var(--color-letras);
+}
+
+.text-bg-linux {
+    background-color: white;
+    color: black;
+}
+
+.text-bg-nextjs {
+    background-color: black;
+    color: white;
+}
+
+.text-bg-typescript {
+    background-color: rgb(0, 122, 204);
+    color: var(--color-letras);
+}
+
+.text-bg-antdesign {
+    background-color: rgb(245, 34, 45);
+    color: var(--color-letras);
+}
+
+.text-bg-laravel {
+    background-color: rgb(219, 58, 52);
+    color: var(--color-letras);
+}
+
+.text-bg-react {
+    background-color: rgb(97, 219, 251);
+    color: var(--color-letras);
+}
+
+.text-bg-git {
+    background-color: rgb(61, 45, 0);
+    color: var(--color-letras);
+}
+
+.text-bg-docker {
+    background-color: rgb(13, 183, 237);
+    color: var(--color-letras);
+}
+
+.text-bg-npm {
+    background-color: rgb(204, 53, 52);
+    color: var(--color-letras);
+}
+
+.text-bg-gitlab {
+    background-color: rgb(226, 67, 42);
+    color: var(--color-letras);
+}
+
+
+.container-footer {
+    background-color: var(--color-base) !important;
+    color: var(--color-letras);
+}
+
+
+
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .profesion {
+        font-size: 22px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .formacion-body {
+        text-align: left;
+    }
+
+    .seccion-body {
+        text-align: justify;
+    }
+
+    .seccion-title,
+    .formacion-title,
+    .experience-title {
+        font-size: 20px;
+    }
+
+    .seccion-body,
+    .presentation,
+    .formacion-body,
+    .experience-body {
+        font-size: 17px;
+    }
+
+    .title-skills {
+        font-size: 18px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+}
