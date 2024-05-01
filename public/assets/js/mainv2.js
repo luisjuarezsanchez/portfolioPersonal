@@ -242,6 +242,64 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+
+
+    // Fecha de inicio y fecha actual
+    var startDate = new Date('2021-11-01');
+    var currentDate = new Date();
+
+    // Calcular la diferencia en milisegundos
+    var difference = currentDate - startDate;
+
+    // Calcular años
+    var years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365.25));
+
+    // Calcular meses
+    var months = Math.floor((difference % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
+
+    // Calcular días
+    var days = Math.floor((difference % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+
+
+    // Crear la cadena de texto con la diferencia
+    var experienceText = years + " años - " + months + " meses - " + days + " días ";
+
+    // Mostrar la diferencia en el elemento HTML
+    document.getElementById("experience").innerText = experienceText;
+
+
+
+
+    function isOnScreen(el) {
+        var rect = el.getBoundingClientRect();
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        var umbral = 0.1; // Umbral del 50%
+        return (
+            rect.top <= windowHeight * (1 - umbral) &&
+            rect.bottom >= windowHeight * umbral
+        );
+    }
+
+    function addAnimation() {
+        var cocolab = document.getElementById('Cocolab');
+        var secretaria = document.getElementById('Secretaria');
+        var sprogramacion = document.getElementById('Sprogramacion');
+        var timeline = document.getElementById('experience-title');
+
+        if (isOnScreen(timeline)) {
+            cocolab.classList.remove('d-none')
+            cocolab.classList.add('animate__animated', 'animate__fadeInLeft');
+            secretaria.classList.remove('d-none')
+            secretaria.classList.add('animate__animated', 'animate__fadeInRight');
+            sprogramacion.classList.remove('d-none')
+            sprogramacion.classList.add('animate__animated', 'animate__fadeInLeft');
+        }
+
+    }
+
+    window.addEventListener('scroll', addAnimation);
+
 });
 
 
@@ -259,6 +317,7 @@ function filtrarTarjetas(categoria) {
 }
 
 function openModal(clickedImg) {
+    document.getElementById('myModal').classList.add('animate__animated', 'animate__fadeIn');
     var modal = document.getElementById("myModal");
     var modalImg = document.getElementById("modalImg");
     var imgSrc = clickedImg.getAttribute('src');
@@ -272,20 +331,18 @@ function closeModal() {
 }
 
 function openModalDescription(titulo, subtitulo, imagen, descripcion,) {
+    document.getElementById('proyectsModal').classList.add('animate__animated', 'animate__slideInDown');
     document.getElementById('proyectsModal').style.display = 'block';
     document.getElementById('titleModal').innerText = titulo;
     document.getElementById('subtitleModal').innerText = subtitulo;
     document.getElementById('imgModal').src = imagen;
     document.getElementById('bodyModal').innerText = descripcion;
     document.getElementById('btn-back').classList.add('d-none');
-
-
 }
 
 function closeModalDescription() {
     document.getElementById('proyectsModal').style.display = 'none';
     document.getElementById('btn-back').classList.remove('d-none');
-
 }
 
 

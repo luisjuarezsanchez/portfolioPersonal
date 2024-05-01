@@ -31,19 +31,19 @@
             <div class="row align-items-center text-center" style="color:white;">
                 <div class="col-6">
                     <p class="bold">PHP</p>
-                    <img class="img-fluid mb-3" width="50%" src="{{ asset('assets/icons/15.svg') }}" alt="">
+                    <img class="img-fluid mb-3 img-zoom" width="50%" src="{{ asset('assets/icons/15.svg') }}" alt="">
                 </div>
                 <div class="col-6">
                     <p class="bold">Bootstrap</p>
-                    <img class="img-fluid mb-3" width="50%" src="{{ asset('assets/icons/12.svg') }}" alt="">
+                    <img class="img-fluid mb-3 img-zoom" width="50%" src="{{ asset('assets/icons/12.svg') }}" alt="">
                 </div>
                 <div class="col-6">
                     <p class="bold">Laravel</p>
-                    <img class="img-fluid" width="50%" src="{{ asset('assets/icons/1.svg') }}" alt="">
+                    <img class="img-fluid img-zoom" width="50%" src="{{ asset('assets/icons/1.svg') }}" alt="">
                 </div>
                 <div class="col-6">
                     <p class="bold">MySQL</p>
-                    <img class="img-fluid" width="50%" src="{{ asset('assets/icons/9.svg') }}" alt="">
+                    <img class="img-fluid img-zoom" width="50%" src="{{ asset('assets/icons/9.svg') }}" alt="">
                 </div>
             </div>
         </div>

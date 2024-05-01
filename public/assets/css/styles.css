@@ -11,6 +11,8 @@
     --academic-cards: #0A1F2E;
     --color-adicional: #3b82f6;
     --verde-complementario: #22c55e;
+    --color-logo-primario: #004be0;
+    --color-logo-secundario: #f14902;
 }
 
 
@@ -38,12 +40,10 @@ body {
     /* Cambia el color del track */
 }
 
-
-
 .title {
     color: var(--color-primario);
     margin-bottom: 10px;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .hr-banner {
@@ -56,13 +56,16 @@ body {
 
 .profesion,
 .name {
-    color: var(--color-letras);
-    font-size: 25px;
+    color: var(--color-subtitulos);
+    font-size: 20px;
 }
 
 .name {
     margin-bottom: 20px;
+    color: var(--color-letras);
 }
+
+
 
 .presentation {
     color: var(--color-letras);
@@ -119,7 +122,7 @@ body {
 .experience-title {
     color: var(--color-subtitulos);
     margin-bottom: 5px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .formacion-body,
@@ -132,6 +135,7 @@ body {
 
 .btn-cv {
     margin-top: 10px;
+    margin-right: 4px;
 }
 
 .img-banner {
@@ -232,14 +236,19 @@ body {
 }
 
 .main-timeline .title-experience {
-    color: white;
-    font-size: 20px;
+    font-size: 18px;
+    color: var(--color-subtitulos);
+}
+
+.time-experience {
+    font-size: 17px;
     margin: 0 0 5px;
+
 }
 
 .place-experience {
-    color: white;
-    font-size: 20px;
+    color: var(--color-primario);
+    font-size: 19px;
 }
 
 .main-timeline .description-experience {
@@ -276,7 +285,7 @@ body {
 }
 
 .main-timeline .timeline:nth-child(4n+2) .title-experience {
-    color: white;
+    color: var(--color-subtitulos);
 }
 
 .main-timeline .timeline:nth-child(4n+3) .timeline-content:before {
@@ -284,7 +293,7 @@ body {
 }
 
 .main-timeline .timeline:nth-child(4n+3) .title-experience {
-    color: white;
+    color: var(--color-subtitulos)
 }
 
 .main-timeline .timeline:nth-child(4n+4) .timeline-content:before {
@@ -338,6 +347,7 @@ body {
 
 .card-text {
     color: var(--color-letras);
+    text-align: justify;
 }
 
 .card-academic {
@@ -412,6 +422,10 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+.title-modal {
+    color: var(--color-primario);
+}
+
 /* Estilos para la imagen en el modal */
 .modal-content {
     margin: auto;
@@ -422,6 +436,10 @@ body {
 
 .modal-body {
     text-align: justify;
+}
+
+.body-modal {
+    color: var(--color-subtitulos);
 }
 
 /* Estilo para el botón de cierre */
@@ -577,7 +595,7 @@ body {
     }
 
     .profesion {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .name {

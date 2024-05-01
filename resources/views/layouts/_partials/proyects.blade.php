@@ -1,7 +1,7 @@
 <div class="container container-proyects mb-5" id="container-proyects">
     <div class="row">
         <div class="col-12 mb-4">
-            <h3 class="seccion-title"><span class="bold">Proyectos</span></h3>
+            <h3 id="proyects-title" class="seccion-title"><span class="bold">Proyectos</span></h3>
             <p class="seccion-body">
                 Mi portafolio destaca mi experiencia en desarrollo de software con proyectos que reflejan mi compromiso
                 con la calidad y la innovación. Estos proyectos demuestran mi capacidad para abordar desafíos complejos
@@ -42,7 +42,7 @@
                     ['nombre' => 'Docker', 'clase' => 'text-bg-docker'],
                 ],
                 'descripcion' =>
-                    'Participe en la cinfiguración del ambiente del proyecto, hice la pertiente configuración del servidor, configure el entorno de la base de datos (la cual se instaló en un contenedor) y la seguridad del servidor en general, se solicitó la instalación de la herramienta Wordpress, asi como la configuración de las versiones adecuadas de PHP.',
+                    'Participe en la configuracion del ambiente del proyecto, efectue la pertiente configuración del servidor, configure el entorno de la base de datos (la cual se instaló en un contenedor) y la seguridad del servidor en general, se solicitó la instalación de la herramienta Wordpress, asi como la configuración de las versiones adecuadas de PHP.',
                 'enlace' => [['default' => '', 'url' => 'https://otaem.edomex.gob.mx/']],
             ],
             [
@@ -65,7 +65,7 @@
             [
                 'imagen' => asset('assets/img/proyects/4.svg'),
                 'titulo' => 'Acervo público del EDOMEX',
-                'subtitulo' => 'Página para conocer el acervo cultural del EODMEX',
+                'subtitulo' => 'Página para conocer el acervo cultural del EDOMEX',
                 'tecnologias' => [
                     ['nombre' => 'MySQL', 'clase' => 'text-bg-mysql'],
                     ['nombre' => 'PHP', 'clase' => 'text-bg-php'],
@@ -78,7 +78,7 @@
                     ['nombre' => 'Bootstrap', 'clase' => 'text-bg-bootstrap'],
                 ],
                 'descripcion' =>
-                    'Para este proyecto se necesitaba hacer la publicación del acervo cultural del EDOMEX, mismo que tenia que ser retratado de manera eficiente para consultas ciudadanas, se configuro una búsqueda en tiempo real, asi como la respectiva generacion de reportes en formato PDF, la configuracion de la base de datos se baso en la creacion de tablas relacionales y vistas.',
+                    'Para este proyecto se necesitaba hacer la publicación del acervo cultural del EDOMEX, mismo que tenia que ser retratado de manera eficiente para consultas ciudadanas, se configuro una búsqueda en tiempo real, asi como la respectiva generacion de reportes en formato PDF, la configuración de la base de datos se baso en la creación= de tablas relacionales y vistas.',
                 'enlace' => [['default' => '', 'url' => 'https://patrimoniocultural.edomex.gob.mx/acervopublico/']],
             ],
             [
@@ -96,7 +96,7 @@
                     ['nombre' => 'GitLab', 'clase' => 'text-bg-gitlab'],
                 ],
                 'descripcion' =>
-                    'En este proyecto desempeñe el rol de Fullstack Developer, ya que interactue con el Frontend y Backend de la aplicación, el proyecto buscaba gestionar de manera eficiente los grupos de visitantes de una hacienda, con varios modulos que permitieran al usuario centralizar el uso de sus espacios, asi como el monitoreo en tiempo real de los visitantes del recinto.',
+                    'En este proyecto desempeñe el rol de Fullstack Developer, ya que interactue con el Frontend y Backend de la aplicación, el proyecto busca gestionar de manera eficiente los grupos de visitantes de una hacienda, con varios módulos que permitieran al usuario centralizar el uso de sus espacios, asi como el monitoreo en tiempo real de los visitantes del recinto.',
                 'enlace' => [['default' => 'd-none', 'url' => 'Sitio1']],
             ],
             [
@@ -158,10 +158,10 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title bold" id="titleModal">Título del Modal</h5>
+                        <h5 class="modal-title title-modal bold" id="titleModal">Título del Modal</h5>
                     </div>
                     <div class="modal-body">
-                        <h5 id="subtitleModal"></h5>
+                        <h5 id="subtitleModal" class="bold"></h5>
                         <img id="imgModal" class="img-fluid mb-3 mt-3" src="{{ asset('assets/img/proyects/1.svg') }}"
                             alt="">
                         <p id="bodyModal">Cuerpo modal</p>

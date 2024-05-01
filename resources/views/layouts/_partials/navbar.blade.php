@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-portfolio" id="container-navbar">
-    <div class="container">
+    <div class="container animate__animated animate__fadeInDown">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><img height="100%" src="{{ asset('assets/icons/17.svg') }}"
