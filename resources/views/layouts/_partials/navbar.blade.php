@@ -32,6 +32,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#container-banner"><span class="bold">Acerca de mi</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#container-contact"><span class="bold">Contacto</span></a>
+                </li>
             </ul>
 
         </div>

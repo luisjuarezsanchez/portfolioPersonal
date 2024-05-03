@@ -23,6 +23,8 @@
 <body>
     {{-- Navbar --}}
     @include('layouts._partials.navbar')
+    {{-- Message --}}
+    @include('layouts._partials.messages')
     {{-- Banner --}}
     @include('layouts._partials.banner')
     {{-- Experiencia --}}
@@ -33,6 +35,8 @@
     @include('layouts._partials.academic')
     {{-- Habilidades --}}
     @include('layouts._partials.skills');
+    {{-- Contacto --}}
+    @include('layouts._partials.contact')
     {{-- Footer --}}
     @include('layouts._partials.footer');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

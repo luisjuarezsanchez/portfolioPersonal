@@ -1,3 +1,3 @@
 @extends('layouts.base')
 
-@section('title','Portafolio profesional')
+@section('title', 'Portafolio profesional')

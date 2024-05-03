@@ -4,6 +4,7 @@
     --color-secundario: #2ecc71;
     --color-fondo: #f2f2f2;
     --color-letras: #ffffff;
+    --color-letras-fornulario: #e4dcdc;
     --color-subtitulos: #ffa500;
     --color-terciario: #192a51;
     --color--elements: #3A4C6B;
@@ -631,4 +632,48 @@ body {
         font-size: 16px;
     }
 
+}
+
+/*Contacto*/
+
+.label-form {
+    color: var(--color-letras);
+    margin-bottom: 12px;
+}
+
+.input-form {
+    width: 100%;
+    background-color: var(--academic-cards);
+    color: var(--color-letras);
+    border-color: var(--color-terciario);
+}
+
+.input-form::placeholder {
+    color: var(--color-letras-fornulario);
+    text-align: start;
+}
+
+.input-form:focus {
+    background-color: var(--academic-cards);
+    color: var(--color-letras);
+}
+
+.input-form:valid {
+    color: var(--color-letras);
+}
+
+#email {
+    height: 60px;
+}
+
+#name {
+    height: 60px;
+}
+
+#subject {
+    height: 60px;
+}
+
+#message {
+    height: 120px
 }

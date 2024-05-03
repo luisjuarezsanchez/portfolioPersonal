@@ -20,22 +20,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    function MonthsExperienceCanvas(dates) {
+        const currentDate = new Date(); // Obtener la fecha actual
+        const monthsExperiences = [];
+
+        for (const dateStr of dates) {
+            const startDate = new Date(dateStr);
+            const differenceMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth());
+            monthsExperiences.push(differenceMonths);
+        }
+
+        return monthsExperiences;
+    }
+
 
 
 
     var popCanvas = document.getElementById("popBackend");
+    // Llamando a la funcion para calcular meses de experiencia con las tecnologias
+    const datesBackend = ['2023-06-01', '2023-11-01', '2022-01-15', '2022-01-15', '2023-06-01'];
+    const monthsExperienceBackend = MonthsExperienceCanvas(datesBackend);
 
-    var misDatos = [12, 6, 28, 28, 12];
-    var misEtiquetas = ["Laravel", "Java", "MySQL", "PHP", "MariaDB"];
-
-    var barChart = new Chart(popCanvas, {
+    new Chart(popCanvas, {
         type: 'bar',
         data: {
-            labels: misEtiquetas,
+            labels: ["Laravel", "Java", "MySQL", "PHP", "MariaDB"],
             datasets: [{
                 axis: 'y',
                 label: 'Meses',
-                data: misDatos,
+                data: monthsExperienceBackend,
                 fill: false,
                 backgroundColor: [
                     'rgba(219, 58, 52, 0.5)',
@@ -100,14 +113,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Logica de chart Frontend
     var popCanvas = document.getElementById("popFrontend");
-    var barChart = new Chart(popCanvas, {
+    // Llamando a la funcion para calcular meses de experiencia con las tecnologias
+    const datesFrontend = ['2022-01-15', '2022-01-15', '2022-01-15', '2023-01-15', '2024-01-01', '2024-01-01', '2024-01-01', '2024-01-01'];
+    const monthsExperienceFrontend = MonthsExperienceCanvas(datesFrontend);
+    // console.log('Diferencias en meses:', monthsExperienceFrontend);
+    new Chart(popCanvas, {
         type: 'bar',
         data: {
             labels: ["HTML", "CSS", "Javascript", "Bootstrap", "AntDesign", "NextJS", "Typescript", "React"],
             datasets: [{
                 axis: 'y',
                 label: 'Meses',
-                data: [28, 28, 28, 16, 5, 5, 5, 5],
+                data: monthsExperienceFrontend,
                 fill: false,
                 backgroundColor: [
                     'rgba(227, 76, 38, 0.5)',
@@ -174,14 +191,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     var popCanvas = document.getElementById("popHerramientas");
-    var barChart = new Chart(popCanvas, {
+    // Llamando a la funcion para calcular meses de experiencia con las tecnologias
+    const datesSkills = ['2022-05-15', '2024-01-01', '2022-01-15', '2023-05-15', '2023-02-01', '2024-01-01', '2023-10-01'];
+    const monthsExperienceSkills = MonthsExperienceCanvas(datesSkills);
+    new Chart(popCanvas, {
         type: 'bar',
         data: {
             labels: ["Git", "Gitlab", "VSC", "Docker", "Xampp", "NPM", "Wordpress"],
             datasets: [{
                 axis: 'y',
                 label: 'Meses',
-                data: [24, 5, 28, 12, 16, 5, 8],
+                data: monthsExperienceSkills,
                 fill: false,
                 backgroundColor: [
                     'rgba(61, 45, 0, 0.5)',
@@ -297,7 +317,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     }
-
     window.addEventListener('scroll', addAnimation);
 
 });
@@ -344,6 +363,7 @@ function closeModalDescription() {
     document.getElementById('proyectsModal').style.display = 'none';
     document.getElementById('btn-back').classList.remove('d-none');
 }
+
 
 
 
